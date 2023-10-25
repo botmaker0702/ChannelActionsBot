@@ -8,14 +8,14 @@ composer.callbackQuery("helper", async (ctx) => {
   try {
     await ctx.editMessageText(
       ctx.t("help") +
-        "\n\nTo approve members who are already in waiting list, upgrade to premium! Contact @xditya_bot for information on pricing.",
+        "\n\n",
       {
         reply_markup: new InlineKeyboard()
-          .text("Add me to your channel", "add_to_channel")
-          .text("Add me to your group", "add_to_group")
+          .text("➕️ Add me to your channel", "add_to_channel")
+          .text("➕️ Add me to your group", "add_to_group")
           .row()
           .text(
-            "Main Menu 📭",
+            "Main Menu ðŸ“­",
             "mainMenu",
           ),
         parse_mode: "HTML",
@@ -34,10 +34,10 @@ composer.callbackQuery(/add_to_(.*)/, async (ctx) => {
       reply_markup: new InlineKeyboard()
         .url(
           `Add to ${channelOrGroup}`,
-          `https://t.me/${ctx.me.username}?start${channelOrGroup}=by_BotzHub&admin=invite_users+manage_chat`,
+          `https://t.me/${ctx.me.username}?start${channelOrGroup}=by_OtpMallOwner&admin=invite_users+manage_chat`,
         )
-        .text("✅ Done", `select_${channelOrGroup}`).row()
-        .text("« Back", "mainMenu"),
+        .text("âœ… Done", `select_${channelOrGroup}`).row()
+        .text("Â« Back", "mainMenu"),
     },
   );
 });
