@@ -17,7 +17,7 @@ composer
       return;
     }
     if (ctx.chat.type != "private") return;
-    await ctx.reply(ctx.t("hiii", { user: ctx.from!.first_name }), {
+    await ctx.reply("hiii", { user: ctx.from!.first_name }, {
       parse_mode: "HTML",
       reply_markup: new InlineKeyboard()
         .text(ctx.t("usage-help"), "helper")
