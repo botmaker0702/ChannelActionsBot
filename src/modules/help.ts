@@ -15,7 +15,7 @@ composer.callbackQuery("helper", async (ctx) => {
           .text("➕️ Add me to your group", "add_to_group")
           .row()
           .text(
-            "Main Menu ðŸ“­",
+            "Main Menu 🏡­",
             "mainMenu",
           ),
         parse_mode: "HTML",
@@ -33,7 +33,7 @@ composer.callbackQuery(/add_to_(.*)/, async (ctx) => {
     {
       reply_markup: new InlineKeyboard()
         .url(
-          `Add to ${channelOrGroup}`,
+          `➕️ Add to ${channelOrGroup}`,
           `https://t.me/${ctx.me.username}?start${channelOrGroup}=by_OtpMallOwner&admin=invite_users+manage_chat`,
         )
         .text("✅️ Done", `select_${channelOrGroup}`).row()
