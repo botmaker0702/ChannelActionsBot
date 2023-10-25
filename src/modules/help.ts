@@ -36,8 +36,8 @@ composer.callbackQuery(/add_to_(.*)/, async (ctx) => {
           `Add to ${channelOrGroup}`,
           `https://t.me/${ctx.me.username}?start${channelOrGroup}=by_OtpMallOwner&admin=invite_users+manage_chat`,
         )
-        .text("âœ… Done", `select_${channelOrGroup}`).row()
-        .text("Â« Back", "mainMenu"),
+        .text("✅️ Done", `select_${channelOrGroup}`).row()
+        .text("⏪️ Back", "mainMenu"),
     },
   );
 });
