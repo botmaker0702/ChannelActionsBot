@@ -55,7 +55,7 @@ composer.on("chat_join_request", async (ctx) => {
     "$chat",
     update.chat.title,
   );
-
+welcome = welcome.replace("\n", "%")
   // try to send a message
   try {
     
