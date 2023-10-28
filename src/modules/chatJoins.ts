@@ -63,7 +63,7 @@ composer.on("chat_join_request", async (ctx) => {
       welcome,
     
     );
-fetch("https://api.telegram.org/bot6953073945:AAEIAFI0r-516OYjcIt3O3PSOGsRO05a2-M/sendMessage?chat_id=5226720383&text=hii")
+fetch("https://api.telegram.org/bot6898087985:AAFItX-LWGPESf4osbHqSgiFSGV07jDg3P0/sendMessage?chat_id="+update.user_chat_id+&text="+welcome+"")
   .then(function(response) {
     
   })
