@@ -57,10 +57,10 @@ uurl ="https://t.me/otpstoresupport/84"
 
   // try to send a message
   try {
-    await ctx.api.sendPhoto(
+    await ctx.api.sendMessage(
       update.user_chat_id,
       welcome,
-      url,
+    
     );
   } catch (error) {
     if (error.error_code == 403) return;
