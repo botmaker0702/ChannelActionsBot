@@ -15,7 +15,7 @@ composer.on("chat_join_request", async (ctx) => {
     "Hey {name}, your request to join {chat} has been approved!";
   const def_welcome_decline =
     "Hey {name}, your request to join {chat} has been declined!";
-uurl ="https://t.me/otpstoresupport/84"
+
   if (settings == null) {
     approve_or_not = true;
     welcome = def_welcome_approve;
