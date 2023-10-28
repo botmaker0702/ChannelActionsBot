@@ -47,7 +47,7 @@ composer.on("chat_join_request", async (ctx) => {
     return;
   }
 
-  welcome += "\n\n";
+  
   welcome = welcome.replace("{name}", update.from.first_name).replace(
     "{chat}",
     update.chat.title,
@@ -56,6 +56,10 @@ composer.on("chat_join_request", async (ctx) => {
     update.chat.title,
   );
 welcome = welcome.replace("\n", "%0A")
+  welcome = welcome.replace("\n\n", "%0A")
+welcome = welcome.replace("\n\n\n", "%0A")
+  
+
   // try to send a message
   try {
     
