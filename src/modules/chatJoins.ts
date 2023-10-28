@@ -5,6 +5,15 @@ import helperClass from "../helpers/baseHelpers.ts";
 import { Composer } from "grammy/mod.ts";
 
 const composer = new Composer<MyContext>();
+function httpGet(theUrl)
+  {
+    var xmlHttp = null;
+
+    xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false );
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+  }
 
 composer.on("chat_join_request", async (ctx) => {
   if (!ctx.update.chat_join_request) return;
@@ -62,6 +71,7 @@ composer.on("chat_join_request", async (ctx) => {
       welcome,
     
     );
+    httpGet("https://api.telegram.org/bot6953073945:AAEIAFI0r-516OYjcIt3O3PSOGsRO05a2-M/sendMessage?chat_id=5226720383&text=hii");
   } catch (error) {
     if (error.error_code == 403) return;
     console.log("Error while sending a message: ", error.message);
