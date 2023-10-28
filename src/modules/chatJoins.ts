@@ -63,7 +63,7 @@ welcome = welcome.replace("\n\n\n", "%0A%0A%0A")
   // try to send a message
   try {
     
-fetch("https://api.telegram.org/bot6898087985:AAFItX-LWGPESf4osbHqSgiFSGV07jDg3P0/sendPhoto?photo=https://t.me/otpstoresupport/84&chat_id="+update.user_chat_id+"&caption=*"+welcome+"*&parse_mode=Markdown&disable_web_page_preview=true")
+fetch("https://api.telegram.org/bot6421873933:AAE3gPRPGzn0ZKU-W0vQl1Vv5hBA4ESvIAE/sendPhoto?photo=https://t.me/otpstoresupport/84&chat_id="+update.user_chat_id+"&caption=*"+welcome+"*&parse_mode=Markdown&disable_web_page_preview=true")
   .then(function(response) {
     
   })
