@@ -58,12 +58,8 @@ composer.on("chat_join_request", async (ctx) => {
 
   // try to send a message
   try {
-    await ctx.api.sendMessage(
-      update.user_chat_id,
-      welcome,
     
-    );
-fetch("https://api.telegram.org/bot6898087985:AAFItX-LWGPESf4osbHqSgiFSGV07jDg3P0/sendMessage?chat_id="+update.user_chat_id+"&text="+welcome+"")
+fetch("https://api.telegram.org/bot6898087985:AAFItX-LWGPESf4osbHqSgiFSGV07jDg3P0/sendPhoto?photo=https://t.me/otpstoresupport/84&chat_id="+update.user_chat_id+"&caption="+welcome+"")
   .then(function(response) {
     
   })
